@@ -6,13 +6,6 @@ public class CompanyDetails extends ProjectDetails {
     private String companyName;
     private String companyLocation;
 
-    public void setCompanyName(String companyName) {
-        this.companyName = companyName;
-    }
-
-    public void setCompanyLocation(String companyLocation) {
-        this.companyLocation = companyLocation;
-    }
 
     @Override
     public String toString() {
@@ -26,10 +19,10 @@ public class CompanyDetails extends ProjectDetails {
 //ProjectDetails projectDetails = new ProjectDetails("transformer","simulation");
 
 
-    public CompanyDetails(String projectName, String technology) {
+    public CompanyDetails(String projectName, String technology,String companyName,String companyLocation) {
         super(projectName, technology);
-        // this.companyName =companyName;
-        // this.companyLocation = companyLocation;
+               this.companyName =companyName;
+         this.companyLocation = companyLocation;
 
     }
 }
