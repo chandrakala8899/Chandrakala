@@ -2,11 +2,13 @@ package Rapido;
 
 public class RapidoTest {
     public static void main(String[] args) {
-        BookingDetails bookingDetails = new BookingDetails("shareAuto","activa",new CarDetails(),4);
-        CarDetails carDetails = new CarDetails("Shift","2000");
+        CarDetails carDetails = new CarDetails("Shift","2000",1234);
+
+        BookingDetails bookingDetails = new BookingDetails("shareAuto","activa",carDetails,1);
         BookingProcess bookingProcess = new BookingProcess();
-        System.out.println(carDetails);
-        System.out.println(bookingProcess.Rapido(bookingDetails));
+        //System.out.println(carDetails);
+        bookingProcess.Rapido(bookingDetails);
+       // System.out.println(carDetails.getCar("car","2000",1234));
 
 
     }

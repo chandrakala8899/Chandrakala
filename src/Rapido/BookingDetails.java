@@ -1,14 +1,11 @@
 package Rapido;
 
-public class BookingDetails {
+public class BookingDetails extends CarDetails {
     public CarDetails car;
     public String auto;
     public String bike;
     private int noOfPersons;
 
-    public CarDetails getCar() {
-        return car;
-    }
 
     public String getAuto() {
         return auto;
@@ -25,17 +22,17 @@ public class BookingDetails {
     @Override
     public String toString() {
         return "BookingDetails{" +
-                "car=" + car +
-                ", auto='" + auto + '\'' +
+                "auto='" + auto + '\'' +
                 ", bike='" + bike + '\'' +
                 ", noOfPersons=" + noOfPersons +
                 '}';
     }
 
-    public BookingDetails(String auto, String bike, CarDetails car, int noOfPersons){
+    public BookingDetails(String auto, String bike, CarDetails carDetails,int noOfPersons){
+        super(carDetails.getCarType(), carDetails.getCharge(), carDetails.getOtp());
         this.auto= auto;
         this.bike = bike;
-        this.car = car;
+        //this.car = car;
         this.noOfPersons = noOfPersons;
     }
 }
