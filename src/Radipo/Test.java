@@ -6,7 +6,7 @@ public class Test {
         BookingProcess bookingProcess = new BookingProcess();
         CarDetails carDetails = new CarDetails("BMW", "1000");
         BookingDetails bookingDetails = new BookingDetails(1234,"Rapido Auto",
-                "Bike",123,carDetails);
+                "Bike",4,carDetails);
         bookingProcess.rapidoBooking(bookingDetails);
 
             }
